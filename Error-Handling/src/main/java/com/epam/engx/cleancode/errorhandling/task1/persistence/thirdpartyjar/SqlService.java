@@ -6,9 +6,9 @@ import java.util.Map;
 
 public interface SqlService {
 
-    Map queryUserHomeAddress(String userId) throws SQLException;
+    Map queryUserHomeAddress(String userId) throws UserHomeAdressQueryException;
 
-    List<Map> queryUserDeliveryAddress(String userId) throws SQLException;
+    List<Map> queryUserDeliveryAddress(String userId) throws UserDeliveryAdressQueryException;
 
-    List<Map> queryUserOrderAddress(String userId) throws SQLException;
+    List<Map> queryUserOrderAddress(String userId) throws UserOrderAdressQueryException;
 }

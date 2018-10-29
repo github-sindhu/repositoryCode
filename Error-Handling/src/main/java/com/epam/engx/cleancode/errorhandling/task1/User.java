@@ -1,5 +1,6 @@
 package com.epam.engx.cleancode.errorhandling.task1;
 
+import com.epam.engx.cleancode.errorhandling.task1.persistence.thirdpartyjar.QueryAdressesException;
 import com.epam.engx.cleancode.errorhandling.task1.thirdpartyjar.Address;
 
 import java.sql.SQLException;
@@ -22,7 +23,7 @@ public class User {
                 return orderAddresses.get(orderAddresses.size() - 1);
             else
                 return addressDao.getHomeAddress(userId);
-        } catch (SQLException e) {
+        } catch (QueryAdressesException e) {
             return defaultAddress;
         }
     }

@@ -5,7 +5,6 @@ import java.util.Date;
 
 public class AccountDetails {
     private Date birth;
-    private int age;
     private BigDecimal balance;
     private Date startDate;
 
@@ -33,12 +32,6 @@ public class AccountDetails {
         this.balance = balance;
     }
 
-    public int getAge() {
-        return age;
-    }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
 
 }

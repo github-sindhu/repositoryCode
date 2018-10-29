@@ -4,5 +4,5 @@ public interface Product {
 
     double getProductPrice();
 
-    boolean isAvailable();
+    boolean isNotAvailable();
 }

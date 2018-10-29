@@ -20,10 +20,19 @@ public class SitePage {
     }
 
     public String getEditablePageUrl(Map<String, String> params) {
+
+
+
+        return HTTP + DOMAIN + EDITABLE + getParamsString(params) + getAttributes();
+    }
+
+    public String getParamsString(Map<String, String> params)
+    {
         String paramsString = "";
         for (Map.Entry<String, String> param : params.entrySet())
-            paramsString += "&" + param.getKey() + "=" + param.getValue();
-        return HTTP + DOMAIN + EDITABLE + paramsString + getAttributes();
+        paramsString += "&" + param.getKey() + "=" + param.getValue();
+        return paramsString;
+
     }
 
     private String getAttributes() {
